@@ -1,0 +1,19 @@
+name: Local contract tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test application with substituted BigQuery client
+        run: python -m unittest discover -s tests -v
+      - name: Run offline demonstration
+        run: python demo.py
