@@ -14,4 +14,6 @@ Date : 25 octobre 2026.
 
 Les tests remplacent le client BigQuery et utilisent un objet requête de test. Ils n'exécutent pas le serveur Functions Framework ni une vraie requête réseau. Les dépendances cloud n'ont pas été installées ou verrouillées pendant cette préparation.
 
-Le workflow GitHub Actions est préparé pour Python 3.11 et 3.12. Il ne déploie aucune ressource. Aucun résultat GitHub Actions distant, test IAM, transfert DLQ ou écriture BigQuery réelle n'est revendiqué ici.
+Le workflow GitHub Actions a réussi sous Python 3.11 et 3.12, avec les 13 tests et la démo dans chaque environnement. [Exécution vérifiée](https://github.com/MididouNueve/gcp-pubsub-dead-letter-recovery/actions/runs/40225076102), commit `dd10a481edc720c880bba40edc8d79f605dd62a6`.
+
+Ce workflow ne déploie aucune ressource. Aucun test IAM, transfert DLQ ou écriture BigQuery réelle n'est revendiqué ici.

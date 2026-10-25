@@ -49,7 +49,7 @@ python3 demo.py
 
 La démo utilise un faux client BigQuery et deux événements synthétiques. Elle affiche une insertion simulée avec HTTP 200, puis un rejet avec HTTP 500. Elle ne simule ni le service Pub/Sub, ni ses retries, ni un transfert réel en DLQ.
 
-**Validation locale du 25 octobre 2026 : 13 tests réussis sous Python 3.11 et 3.12.** Voir le [bilan de validation](docs/validation.md). Le workflow GitHub Actions est fourni ; aucune exécution distante n'est revendiquée à ce stade.
+**Validation locale du 25 octobre 2026 : 13 tests réussis sous Python 3.11 et 3.12.** Voir le [bilan de validation](docs/validation.md). Les mêmes tests et la démo ont aussi réussi sur GitHub Actions : [exécution du 25 octobre 2026](https://github.com/MididouNueve/gcp-pubsub-dead-letter-recovery/actions/runs/40225076102).
 
 ## Lire le dépôt
 
