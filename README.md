@@ -1,14 +1,12 @@
 # Pub/Sub : diagnostiquer les messages en échec et leur transfert en DLQ
 
-**Étude de cas issue d'un exercice de bootcamp, accompagnée d'une reproduction locale.**
-
 Un pipeline reçoit des événements de changement de prix via Pub/Sub, les traite dans une fonction Python et tente de les insérer dans BigQuery. Pendant l'exercice, des messages échouaient et n'atteignaient pas la file d'erreurs attendue. Le diagnostic a porté sur le contenu des événements et les permissions des différents comptes de service.
 
 **Résultat historique :** les journaux d'audit confirment l'attribution des permissions DLQ au service agent Pub/Sub. La réception finale de deux messages a été rapportée à l'issue de l'exercice ; la sortie terminal originale n'a pas été retrouvée. Une insertion réussie dans BigQuery et un rejeu des messages ne sont pas démontrés par les pièces conservées.
 
 ## Ma contribution
 
-J'ai reproduit la configuration et les tests du support de formation, inspecté les journaux et participé au diagnostic des échecs. Avec assistance, j'ai corrigé les permissions du service agent Pub/Sub pour permettre le transfert vers la DLQ. Ce dépôt formalise cette démarche et ses limites. La reproduction locale, les tests et cette documentation ont été préparés ultérieurement avec assistance IA.
+J'ai reproduit la configuration et les tests du support de formation, inspecté les journaux et participé au diagnostic des échecs. Avec assistance, j'ai corrigé les permissions du service agent Pub/Sub pour permettre le transfert vers la DLQ. Ce dépôt formalise cette démarche et ses limites.
 
 ## Architecture
 
